@@ -21,7 +21,6 @@
 }
 
 - (void)setStringToEncode:(NSString *)stringToEncode {
-    NSDate *start = [NSDate date];
     _stringToEncode = stringToEncode;
     
     //Set code type
@@ -31,7 +30,7 @@
     //Data to encode
     NSData *data = [_stringToEncode dataUsingEncoding:NSUTF8StringEncoding];
     [filter setValue:data forKey:@"inputMessage"];
-    [filter setValue:@"L" forKey:@"inputCorrectionLevel"];
+    [filter setValue:@"H" forKey:@"inputCorrectionLevel"];
     
     CIImage *outputImage = [filter outputImage];
     
@@ -49,10 +48,6 @@
                                     rate:10.0];
     
     self.image = resized;
-    NSDate *methodFinish = [NSDate date];
-    NSTimeInterval executionTime = [methodFinish timeIntervalSinceDate:start];
-    
-    NSLog(@"Execution Time: %f", executionTime);
 }
 
 #pragma mark - Private Methods
