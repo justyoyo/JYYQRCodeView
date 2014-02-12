@@ -30,7 +30,7 @@
     //Data to encode
     NSData *data = [_stringToEncode dataUsingEncoding:NSUTF8StringEncoding];
     [filter setValue:data forKey:@"inputMessage"];
-    [filter setValue:@"H" forKey:@"inputCorrectionLevel"];
+    [filter setValue:@"L" forKey:@"inputCorrectionLevel"];
     
     CIImage *outputImage = [filter outputImage];
     
