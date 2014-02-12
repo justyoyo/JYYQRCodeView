@@ -21,7 +21,7 @@
 		E256607A18AB8D8A003A07AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E256605C18AB8D8A003A07AA /* UIKit.framework */; };
 		E256608218AB8D8A003A07AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E256608018AB8D8A003A07AA /* InfoPlist.strings */; };
 		E256608418AB8D8A003A07AA /* ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E256608318AB8D8A003A07AA /* ExampleTests.m */; };
-		E256609318AB99F8003A07AA /* JYYQRCodeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E256609218AB99F8003A07AA /* JYYQRCodeImageView.m */; };
+		E256609618AB9C4E003A07AA /* JYYQRCodeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E256609518AB9C4E003A07AA /* JYYQRCodeImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +54,8 @@
 		E256607F18AB8D8A003A07AA /* ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExampleTests-Info.plist"; sourceTree = "<group>"; };
 		E256608118AB8D8A003A07AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E256608318AB8D8A003A07AA /* ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTests.m; sourceTree = "<group>"; };
-		E256609118AB99F8003A07AA /* JYYQRCodeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JYYQRCodeImageView.h; path = ../JYYQRCodeImageView.h; sourceTree = "<group>"; };
-		E256609218AB99F8003A07AA /* JYYQRCodeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JYYQRCodeImageView.m; path = ../JYYQRCodeImageView.m; sourceTree = "<group>"; };
+		E256609418AB9C4E003A07AA /* JYYQRCodeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JYYQRCodeImageView.h; path = ../JYYQRCodeImageView/JYYQRCodeImageView.h; sourceTree = "<group>"; };
+		E256609518AB9C4E003A07AA /* JYYQRCodeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JYYQRCodeImageView.m; path = ../JYYQRCodeImageView/JYYQRCodeImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,8 +159,8 @@
 		E256609018AB8DEC003A07AA /* JYYQRCodeImageView */ = {
 			isa = PBXGroup;
 			children = (
-				E256609118AB99F8003A07AA /* JYYQRCodeImageView.h */,
-				E256609218AB99F8003A07AA /* JYYQRCodeImageView.m */,
+				E256609418AB9C4E003A07AA /* JYYQRCodeImageView.h */,
+				E256609518AB9C4E003A07AA /* JYYQRCodeImageView.m */,
 			);
 			name = JYYQRCodeImageView;
 			sourceTree = "<group>";
@@ -266,7 +266,7 @@
 				E256606518AB8D8A003A07AA /* main.m in Sources */,
 				E256606F18AB8D8A003A07AA /* JYYViewController.m in Sources */,
 				E256606918AB8D8A003A07AA /* JYYAppDelegate.m in Sources */,
-				E256609318AB99F8003A07AA /* JYYQRCodeImageView.m in Sources */,
+				E256609618AB9C4E003A07AA /* JYYQRCodeImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
