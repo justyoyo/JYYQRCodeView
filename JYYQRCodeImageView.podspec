@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
   #  found CocoaPods accept just the names.
   #
 
-  s.author             = { "Tom Hutchinson" => "tom@justyoyo.com" }"
+  s.author             = { "Tom Hutchinson" => "tom@justyoyo.com" }
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
