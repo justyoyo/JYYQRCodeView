@@ -12,20 +12,19 @@
 @interface JYYViewController ()
 
 @property (strong, nonatomic) IBOutlet JYYQRCodeImageView *qrcodeImageView;
+
 @end
 
 @implementation JYYViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    _qrcodeImageView.stringToEncode = @"4040162332413863";
+    [_qrcodeImageView encodeString:@"Hello World!" withErrorCorrectionLevel:ErrorCorrectionLevelLow];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

@@ -10,27 +10,27 @@
 
 @implementation JYYQRCodeImageView
 
-#pragma mark - Public Interface
-- (id)initWithFrame:(CGRect)frame
-{
+#pragma mark - Public
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
     return self;
 }
 
-- (void)setStringToEncode:(NSString *)stringToEncode {
-    _stringToEncode = stringToEncode;
-    
+- (id)initWithFrame:(CGRect)frame stringToEncode:(NSString *)stringToEncode andErrorCorrectionLevel:(ErrorCorrectionLevel)errorCorrectionLevel {
+    self = [super initWithFrame:frame];
+    [self encodeString:stringToEncode withErrorCorrectionLevel:errorCorrectionLevel];
+    return self;
+}
+
+- (void)encodeString:(NSString *)stringToEncode withErrorCorrectionLevel:(ErrorCorrectionLevel)errorCorrectionLevel {
     //Set code type
     CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
     [filter setDefaults];
     
     //Data to encode
-    NSData *data = [_stringToEncode dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *data = [stringToEncode dataUsingEncoding:NSUTF8StringEncoding];
     [filter setValue:data forKey:@"inputMessage"];
-    [filter setValue:@"L" forKey:@"inputCorrectionLevel"];
+    [filter setValue:[self convertErrorCorrectionLevelToString:errorCorrectionLevel] forKey:@"inputCorrectionLevel"];
     
     CIImage *outputImage = [filter outputImage];
     
@@ -42,7 +42,6 @@
                                          scale:1
                                    orientation:UIImageOrientationUp];
     
-    // Resize without interpolating
     UIImage *resized = [self resizeImage:image
                              withQuality:kCGInterpolationNone
                                     rate:10.0];
@@ -50,11 +49,10 @@
     self.image = resized;
 }
 
-#pragma mark - Private Methods
+#pragma mark - Private
 - (UIImage *)resizeImage:(UIImage *)image
              withQuality:(CGInterpolationQuality)quality
-                    rate:(CGFloat)rate
-{
+                    rate:(CGFloat)rate {
 	UIImage *resized = nil;
 	CGFloat width = image.size.width * rate;
 	CGFloat height = image.size.height * rate;
@@ -67,6 +65,30 @@
 	UIGraphicsEndImageContext();
 	
 	return resized;
+}
+
+- (NSString *)convertErrorCorrectionLevelToString:(ErrorCorrectionLevel) whichAlpha {
+    NSString *errorCorrectionLevelString = nil;
+    
+    switch(whichAlpha) {
+        case ErrorCorrectionLevelLow:
+            errorCorrectionLevelString = @"L";
+            break;
+        case ErrorCorrectionLevelMedium:
+            errorCorrectionLevelString = @"M";
+            break;
+        case ErrorCorrectionLevelQuartile:
+            errorCorrectionLevelString = @"Q";
+            break;
+        case ErrorCorrectionLevelHigh:
+            errorCorrectionLevelString = @"H";
+            break;
+            
+        default:
+            errorCorrectionLevelString = @"unknown";
+    }
+    
+    return errorCorrectionLevelString;
 }
 
 @end
