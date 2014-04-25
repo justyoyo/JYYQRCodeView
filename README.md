@@ -25,7 +25,4 @@ You can update the encoded text like so
 
 Note, You will need to pass in one of the following ErrorCorrectionLevels. You can read more about them [here](http://en.wikipedia.org/wiki/QR_code#Error_correction)
   
-  ErrorCorrectionLevelLow
-  ErrorCorrectionLevelMedium
-  ErrorCorrectionLevelQuartile
-  ErrorCorrectionLevelHigh
+  ErrorCorrectionLevelLow, ErrorCorrectionLevelMedium, ErrorCorrectionLevelQuartile, ErrorCorrectionLevelHigh
