@@ -1,14 +1,14 @@
 //
-//  JYYQRCodeImageView.m
+//  JYYQRCodeView.m
 //  Example
 //
 //  Created by Tom Hutchinson on 12/02/2014.
 //  Copyright (c) 2014 JustYoyo Ltd. All rights reserved.
 //
 
-#import "JYYQRCodeImageView.h"
+#import "JYYQRCodeView.h"
 
-@implementation JYYQRCodeImageView
+@implementation JYYQRCodeView
 
 #pragma mark - Public
 - (id)initWithFrame:(CGRect)frame {

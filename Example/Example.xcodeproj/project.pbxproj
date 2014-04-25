@@ -21,7 +21,7 @@
 		E256607A18AB8D8A003A07AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E256605C18AB8D8A003A07AA /* UIKit.framework */; };
 		E256608218AB8D8A003A07AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E256608018AB8D8A003A07AA /* InfoPlist.strings */; };
 		E256608418AB8D8A003A07AA /* ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E256608318AB8D8A003A07AA /* ExampleTests.m */; };
-		E256609618AB9C4E003A07AA /* JYYQRCodeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E256609518AB9C4E003A07AA /* JYYQRCodeImageView.m */; };
+		E270F37B190AA26D00787FAC /* JYYQRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E270F37A190AA26D00787FAC /* JYYQRCodeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +54,8 @@
 		E256607F18AB8D8A003A07AA /* ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExampleTests-Info.plist"; sourceTree = "<group>"; };
 		E256608118AB8D8A003A07AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E256608318AB8D8A003A07AA /* ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTests.m; sourceTree = "<group>"; };
-		E256609418AB9C4E003A07AA /* JYYQRCodeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JYYQRCodeImageView.h; path = ../JYYQRCodeImageView/JYYQRCodeImageView.h; sourceTree = "<group>"; };
-		E256609518AB9C4E003A07AA /* JYYQRCodeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JYYQRCodeImageView.m; path = ../JYYQRCodeImageView/JYYQRCodeImageView.m; sourceTree = "<group>"; };
+		E270F379190AA26D00787FAC /* JYYQRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYYQRCodeView.h; sourceTree = "<group>"; };
+		E270F37A190AA26D00787FAC /* JYYQRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYYQRCodeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +85,8 @@
 		E256604C18AB8D8A003A07AA = {
 			isa = PBXGroup;
 			children = (
+				E270F377190AA25B00787FAC /* Vendor */,
 				E256605E18AB8D8A003A07AA /* Example */,
-				E256609018AB8DEC003A07AA /* JYYQRCodeImageView */,
 				E256607D18AB8D8A003A07AA /* ExampleTests */,
 				E256605718AB8D8A003A07AA /* Frameworks */,
 				E256605618AB8D8A003A07AA /* Products */,
@@ -156,13 +156,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E256609018AB8DEC003A07AA /* JYYQRCodeImageView */ = {
+		E270F377190AA25B00787FAC /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				E256609418AB9C4E003A07AA /* JYYQRCodeImageView.h */,
-				E256609518AB9C4E003A07AA /* JYYQRCodeImageView.m */,
+				E270F378190AA26D00787FAC /* JYYQRCodeView */,
 			);
-			name = JYYQRCodeImageView;
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		E270F378190AA26D00787FAC /* JYYQRCodeView */ = {
+			isa = PBXGroup;
+			children = (
+				E270F379190AA26D00787FAC /* JYYQRCodeView.h */,
+				E270F37A190AA26D00787FAC /* JYYQRCodeView.m */,
+			);
+			name = JYYQRCodeView;
+			path = ../JYYQRCodeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +275,7 @@
 				E256606518AB8D8A003A07AA /* main.m in Sources */,
 				E256606F18AB8D8A003A07AA /* JYYViewController.m in Sources */,
 				E256606918AB8D8A003A07AA /* JYYAppDelegate.m in Sources */,
-				E256609618AB9C4E003A07AA /* JYYQRCodeImageView.m in Sources */,
+				E270F37B190AA26D00787FAC /* JYYQRCodeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +482,7 @@
 				E256608918AB8D8A003A07AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E256608A18AB8D8A003A07AA /* Build configuration list for PBXNativeTarget "ExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +491,7 @@
 				E256608C18AB8D8A003A07AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

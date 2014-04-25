@@ -7,11 +7,11 @@
 //
 
 #import "JYYViewController.h"
-#import "JYYQRCodeImageView.h"
+#import "JYYQRCodeView.h"
 
 @interface JYYViewController ()
 
-@property (strong, nonatomic) IBOutlet JYYQRCodeImageView *qrcodeImageView;
+@property (strong, nonatomic) IBOutlet JYYQRCodeView *qrcodeView;
 
 @end
 
@@ -21,7 +21,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    [_qrcodeImageView encodeString:@"Hello World!" withErrorCorrectionLevel:ErrorCorrectionLevelLow];
+    [_qrcodeView encodeString:@"Hello World!" withErrorCorrectionLevel:ErrorCorrectionLevelLow];
 }
 
 - (void)didReceiveMemoryWarning {

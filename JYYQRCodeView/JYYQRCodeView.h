@@ -1,5 +1,5 @@
 //
-//  JYYQRCodeImageView.h
+//  JYYQRCodeView.h
 //  Example
 //
 //  Created by Tom Hutchinson on 12/02/2014.
@@ -15,7 +15,7 @@ typedef enum {
     ErrorCorrectionLevelHigh
 } ErrorCorrectionLevel;
 
-@interface JYYQRCodeImageView : UIImageView
+@interface JYYQRCodeView : UIImageView
 
 - (id)initWithFrame:(CGRect)frame stringToEncode:(NSString *)stringToEncode andErrorCorrectionLevel:(ErrorCorrectionLevel)errorCorrectionLevel;
 
