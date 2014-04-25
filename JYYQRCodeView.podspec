@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
   spec.homepage     = 'https://github.com/justyoyo/JYYQRCodeView'
   spec.author       = 'Tom Hutchinson'
   spec.source       =  { :git => "https://github.com/justyoyo/JYYQRCodeView.git", :tag => "1.1" }
-  spec.source_files = 'JYYQRCodeImageView/*.{h,m}'
+  spec.source_files = 'JYYQRCodeView/*.{h,m}'
   spec.platform     = :ios, '7.0'
   spec.requires_arc = true
 end
