@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name         = 'JYYQRCodeView'
   spec.version      = '1.1'
-  spec.license      = 'MIT'
+  spec.license      = { :type => 'MIT', :file => 'LICENSE' }
   spec.summary      = 'UIImageView Subclass for displaying a QR Code'
   spec.homepage     = 'https://github.com/justyoyo/JYYQRCodeView'
   spec.author       = 'Tom Hutchinson'
