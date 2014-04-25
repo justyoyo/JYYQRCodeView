@@ -15,7 +15,7 @@ Import the header:
 
 	#import "JYYQRCodeView.h"
 
-Then simply alloc and init the view like so 
+Then simply alloc and init the view like so (or use storyboards if you are so inclined)
 
     JYYQRCodeView *someCodeView = [[JYYQRCodeView alloc] initWithFrame:CGRectMake(0, 0, 100, 100) stringToEncode:@"Hello, world!" andErrorCorrectionLevel:ErrorCorrectionLevelLow];
 
